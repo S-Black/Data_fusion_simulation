@@ -88,7 +88,7 @@ gendat<-gendat[ , !(names(gendat) %in% drops)]
 
 colnames(gendat) <- c('C1','C2','X1','X2','X3','X4','S1')
 
-# Paths
+# Save file in feather format that is readable by python
 current_path<-getwd()
 Data_path<-paste0(current_path,'/data/')
 write_feather(gendat, paste0(Data_path,'Multdata.feather'))
